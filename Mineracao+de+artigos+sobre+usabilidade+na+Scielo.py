@@ -11,35 +11,41 @@
 # Belo Horizonte, 05 de dezembro de 2017
 # 
 # 
-# 1 Objetivo geral: Desenvolver uma word cloud a partir das palavras recorrentes nos resumos dos artigos de temática "Usabilidade" disponíveis no indexador Scielo.
+# 1 Objetivo geral
+# 
+# Desenvolver uma word cloud a partir das palavras recorrentes nos resumos dos artigos de temática "Usabilidade" disponíveis no indexador Scielo.
 # 
 # 2 Objetivos específicos:
 # 
-# • Minerar artigos científicos na temática Usabilidade, no idioma português da Scielo, fazendo uso da linguagem de programação intitulada Python;
+# • Minerar artigos científicos na temática Usabilidade, no idioma português da Scielo, fazendo uso de Python;
+# 
 # • Capturar os artigos de temática Usabilidade por título, periódico, autor e resumo;
+# 
 # • Criar uma lista de palavras, remover as stop words dessa lista, apresentando a recorrência de cada palavra a partir dos resumos disponíveis nas publicações mineradas;
 # 
 # 3 Metodologia
-# Para efetivação do objetivo proposto, incicialmente foi realizada a mineração dos dados disponíveis na base de dados Scielo, a partir de uma pesquisa ao termo "Usabilidade", no idioma português, no qual foi possível identificar um total de 117 documentos. Posteriormente foi realizada a captura (web crawler) dos seguintes dados: Título dos artigos, Título dos periódicos, Autorias e Resumos em português.
-# Em seguida, foi criada uma lista de palavras a partir da remoção das stopwords dos resumos no idioma português. Além disso, foi identificada a recorrência de cada palavra descrita nos resumos, essas palavras foram utilizadas para o desenvolvimento da word cloud. Para alcançar os objetivos propostos, utilizou-se diversas bibliotecas de Python, com destaque para:
+# 
+# Para efetivação do objetivo proposto, incicialmente foi realizada a mineração dos dados disponíveis na base de dados Scielo, a partir de uma pesquisa ao termo "Usabilidade", no idioma português, no qual foi possível identificar um total de 117 documentos. Posteriormente foi realizada a captura (web crawler) dos seguintes dados: título dos artigos, título dos periódicos, autorias e resumos em português.
+# Em seguida, foi criada uma lista de palavras a partir da remoção das stop words dos resumos no idioma português. Além disso, foi identificada a recorrência de cada palavra descrita nos resumos, essas palavras foram utilizadas para o desenvolvimento da word cloud. Para alcançar os objetivos propostos, utilizou-se diversas bibliotecas de Python, com destaque para:
 # 
 # BeautifulSoup: Utilizada para extrair dados de arquivos HTML e XML. Funciona com o seu analisador favorito para fornecer maneiras idiomáticas de navegar, pesquisar e modificar a árvore de análise. Geralmente economiza horas ou dias de trabalho do programador;
 # Pandas: Oferece estruturas de dados de alto desempenho. Essa biblioteca é de fácil de uso, sendo uma grande ferramentas de análise de dados;
 # Gensim: Tem o objetivo de lidar com grandes coleções de texto, usando streaming de dados e algoritmos incrementais eficientes, o que o diferencia da maioria dos outros pacotes de software científicos que apenas destinam o processamento em lote e na memória;
 # Matplotlib: Fornece uma API orientada a objetos para incorporar gráficos em aplicativos que usam kits de ferramentas de uso geral;
-# NLTK: Biblioteca da linguagem Python para Processamento de Linguagem Natural e Text Analytics, originalmente criada para o ensino de PLN, mas que vem sendo amplamente adotado no desenvolvimento de aplicações de PLN em geral. Trata-se de um kit de ferramentas, destinado a ajudar com Processamento de Linguagem Natural (PLN). É útil para separar as sentenças em um parágrafo, separar as palavras dentro de cada sentença, reconhecer padrões no texto e criar modelos de classificação que permitam, por exemplo, realizar análise de sentimentos em um conjunto de dados.
+# NLTK: Biblioteca para Processamento de Linguagem Natural (PLN) e Text Analytics, originalmente criada para o ensino de PLN, mas que vem sendo amplamente adotado no desenvolvimento de aplicações de PLN em geral. Trata-se de um kit de ferramentas útil para separar as sentenças em um parágrafo, separar as palavras dentro de cada sentença, reconhecer padrões no texto e criar modelos de classificação que permitam, por exemplo, realizar análise de sentimentos em um conjunto de dados.
 # 
 # 
 # 4 Dificuldades e limitações
+# 
 # Ao considerar Python como uma linguagem de programação relativamente fácil, se comparada a outras linguagens, tive dificuldades para alcançar os objetivos propostos, principalmente pelo fato de nunca ter trabalhado com uma linguagem de programação, o que exigiu maiores esforços de minha parte, fazendo além do curso sugerido pelo Prof. Renato Rocha, outros cursos online, com destaque para dois suportes que me ajudaram bastante, um minicurso de título "Mineração de Emoção em Textos com Python e NLTK" da empresa Udemy, e o Github de autoria de Bárbara Babosa (@bahbbc).
 # Vale ressaltar ainda que a disciplina possibilitou que eu aprendesse um pouco acerca dessa relevante área (Mineração de dados) que cresce exponencialmente, exigindo profissionais qualificados para tratar, organizar e disseminar esses dados, e o profissional da informação, deve estar atento e capacitado para atuar nesse contexto. Como sugestão, acredito que a disciplina poderia ter uma carga horária maior com aulas práticas e presenciais, o que ao meu ver, facilitaria o processo de aprendizagem.
 # Por fim, agradeço pelo desafio e parabenizo os professores envolvidos na construção da disciplina.
 
-# In[99]:
+# In[131]:
 
 
 # Nessa etapa, foi realizada uma mineração de dados sobre a temática Usabilidade na Biblioteca Digital Scielo. A busca geral retornou um total de 117 documentos.
-# Desse total de documentos, foram minerados a partir da atividades de clawleamento os seguintes dados: título, autor, nome do periódico e resumo na idioma portugês..
+# Desse total de documentos, foram minerados a partir da atividades de captura (web crawler) os seguintes dados: título, autor, nome do periódico e resumo na idioma portugês.
 
 # Etapa 1: Mineração referente aos títulos dos artigos da temática "Usabilidade".
  
@@ -77,7 +83,7 @@ for i in range(1, 3):
 print(titulos)   
 
 
-# In[118]:
+# In[132]:
 
 
 # Etapa 2: Mineração referente aos títulos das revistas nas quais os artigos foram publicados.
@@ -115,10 +121,11 @@ for i in range(1, 3):
        print(revista.string)   
        con += 1
        print(con)
-     
+    
+   
 
 
-# In[119]:
+# In[135]:
 
 
 # Etapa 3: Mineração da indicação de autoria dos artigos publicados.
@@ -154,6 +161,7 @@ for i in range(1, 3):
     for elemento in bs_obj.findAll ("div", { "class" : "item" }):
         autor = elemento.find ("div", { "class" : "authors"})
         print(autor.text.strip()) 
+             
 
 
 # In[62]:
