@@ -16,7 +16,7 @@
 # 2 Objetivos específicos:
 # 
 # • Minerar artigos científicos na temática Usabilidade, no idioma português da Scielo, fazendo uso da linguagem de programação intitulada Python;
-# • Capturar os artigos de temática Usabilidade por título, autor, periódico e resumo;
+# • Capturar os artigos de temática Usabilidade por título, periódico, autor e resumo;
 # • Criar uma lista de palavras, remover as stop words dessa lista, apresentando a recorrência de cada palavra a partir dos resumos disponíveis nas publicações mineradas;
 # 
 # 3 Metodologia
@@ -26,7 +26,9 @@
 # BeautifulSoup: Utilizada para extrair dados de arquivos HTML e XML. Funciona com o seu analisador favorito para fornecer maneiras idiomáticas de navegar, pesquisar e modificar a árvore de análise. Geralmente economiza horas ou dias de trabalho do programador;
 # Pandas: Oferece estruturas de dados de alto desempenho. Essa biblioteca é de fácil de uso, sendo uma grande ferramentas de análise de dados;
 # Gensim: Tem o objetivo de lidar com grandes coleções de texto, usando streaming de dados e algoritmos incrementais eficientes, o que o diferencia da maioria dos outros pacotes de software científicos que apenas destinam o processamento em lote e na memória;
-# Matplotlib: Fornece uma API orientada a objetos para incorporar gráficos em aplicativos que usam kits de ferramentas de uso geral.
+# Matplotlib: Fornece uma API orientada a objetos para incorporar gráficos em aplicativos que usam kits de ferramentas de uso geral;
+# NLTK: Biblioteca da linguagem Python para Processamento de Linguagem Natural e Text Analytics, originalmente criada para o ensino de PLN, mas que vem sendo amplamente adotado no desenvolvimento de aplicações de PLN em geral. Trata-se de um kit de ferramentas, destinado a ajudar com Processamento de Linguagem Natural (PLN). É útil para separar as sentenças em um parágrafo, separar as palavras dentro de cada sentença, reconhecer padrões no texto e criar modelos de classificação que permitam, por exemplo, realizar análise de sentimentos em um conjunto de dados.
+# 
 # 
 # 4 Dificuldades e limitações
 # Ao considerar Python como uma linguagem de programação relativamente fácil, se comparada a outras linguagens, tive dificuldades para alcançar os objetivos propostos, principalmente pelo fato de nunca ter trabalhado com uma linguagem de programação, o que exigiu maiores esforços de minha parte, fazendo além do curso sugerido pelo Prof. Renato Rocha, outros cursos online, com destaque para dois suportes que me ajudaram bastante, um minicurso de título "Mineração de Emoção em Textos com Python e NLTK" da empresa Udemy, e o Github de autoria de Bárbara Babosa (@bahbbc).
