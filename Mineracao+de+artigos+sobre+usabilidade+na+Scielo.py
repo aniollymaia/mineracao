@@ -38,7 +38,7 @@
 # In[99]:
 
 
-# Nessa etapa, foi realizada uma mineração de dados sobre a temática Usabilidade na Biblioteca Digital Scielo. A busca geral retornou um total de 116 documentos.
+# Nessa etapa, foi realizada uma mineração de dados sobre a temática Usabilidade na Biblioteca Digital Scielo. A busca geral retornou um total de 117 documentos.
 # Desse total de documentos, foram minerados a partir da atividades de clawleamento os seguintes dados: título, autor, nome do periódico e resumo na idioma portugês..
 
 # Etapa 1: Mineração referente aos títulos dos artigos da temática "Usabilidade".
